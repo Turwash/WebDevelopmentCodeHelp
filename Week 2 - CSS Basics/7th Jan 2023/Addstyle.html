@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-shadow: 2px 2px #ff0000;
+        }
+
+
+        /* PRECEDENCE CHECKING OF ELEMENT, CLASS AND ID */
+        p{
+            color:blue ; /* !important; */
+        }
+        .class-para{
+            color:green;
+        }
+        #id-para{
+            color:red;
+        }
+    </style>
+    <!-- EXTERNAL CSS ADDED -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p style="font-style:italic"> Hello G , Kese Ho Saare !!!</p>
+
+    <h1>USING INLINE CSS IN THIS</h1>
+
+    <h2>THIS CODE IS FOR EXTERNAL CSS</h2>
+
+<!--PRECEDENCE CHECKING OF ELEMENT, CLASS AND ID-->
+    <p class="class-para" id="id-para"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, laudantium?</p>
+</body>
+</html>
