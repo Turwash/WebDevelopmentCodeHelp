@@ -20,3 +20,14 @@ div{
     background-color: aqua;
     position: fixed;
 }
+
+.divc{
+    border : 1px solid black;
+    color: white;
+    background-color: brown;
+    position: sticky;
+    top:170px;
+    left:60px;
+    
+
+}
