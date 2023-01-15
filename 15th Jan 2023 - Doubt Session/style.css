@@ -14,7 +14,7 @@
     height: 100%;
     max-width: 1200px;
     margin: 0 auto; /* Content comes in center , left and right margin equal*/
-     padding: 20px; /* space between border and content */
+    padding: 20px; /* space between border and content */
 }
 
 .container h1 {
@@ -31,6 +31,7 @@
 }
 
 .card {
+    height: 300px;
     width: 32%;
     position: relative;
     margin-bottom: 20px;
