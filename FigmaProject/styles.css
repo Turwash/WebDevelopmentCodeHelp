@@ -75,7 +75,7 @@ section.content1 img, section.content2 img{
 section.content2 img{
     margin-right: 3rem;
 }
-section.content2 + hr{ /*adjacent sibling selector*/
+section.content2 + hr{
     margin-top: -1rem;
 }
 section hr{
@@ -99,11 +99,6 @@ footer h5{
     height: 100%;
     width: 15%;
 
-    /* Notice: Here '.images' is a div container inside footer, and we have set footer as 'justify-content:space-between' i.e. spaces 
-    between all flex items (i.e. '.images', '.menu2', '.addressEmail', '.privacy') will be equal. But it might so happen that the space 
-    between flex items is too large, and you want to shorten it. In that case, apply a bigger width to any flex item 
-    (like how we have given 'width: 15%' here to '.images'), and all other flex items will align in such a way that they
-    are still equally spaced, but now that spacing is lesser. */
 }
 #logo2{
     height: 52%;
@@ -116,7 +111,7 @@ footer h5{
 }
 footer button{
     height: 20%;
-    border-radius: 50%; /* To create round button, use 'border-radius: 50%' */
+    border-radius: 50%; 
     background-color: blue;
     border: none;
     width: 15%;
