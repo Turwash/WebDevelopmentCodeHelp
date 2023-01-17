@@ -1,0 +1,20 @@
+.container{
+    height:700px;
+    border:1px solid red;
+    background-color: yellow;
+
+    display: grid;
+    grid-gap:10px;
+
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(4,1fr);
+
+}
+
+.box{
+    border:1px solid green;
+    background-color: aqua;
+    /* height:100px;
+    width:100px; */
+}
+
