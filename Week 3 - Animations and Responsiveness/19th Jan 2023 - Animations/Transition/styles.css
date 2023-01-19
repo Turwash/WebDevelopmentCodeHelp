@@ -1,0 +1,28 @@
+.container{
+
+    height: 500px;
+    width: 500px;
+    border: 3px solid red;
+    background-color: green;
+    display: flex;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    border: 2px solid orange;
+    background-color: aqua;
+
+    /* transition: 2s;  /*adding transition smoothness */
+    transition-property: background-color;  /* transition on which property  */
+    /* transition-property: all;  /* All Transition , it is bad practice because impacts performance */
+    transition-delay: 5s;  /* animation will work after 5sec  */
+
+}
+
+.box:hover{
+
+
+    background-color: brown;
+}

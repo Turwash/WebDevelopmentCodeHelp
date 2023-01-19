@@ -1,0 +1,15 @@
+.container {
+
+    border: 1px solid brown;
+    background-color: red; 
+    height: 300px;
+    width: 300px;
+}
+
+.box {
+    border: 2px solid green;
+    background-color: aqua;
+    --dark-red: #981a2c;
+    color: var(--dark-red);
+   
+}
