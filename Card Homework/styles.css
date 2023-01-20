@@ -1,0 +1,48 @@
+body {
+    background-color: #000;
+}
+.card {
+    background-color: #fff;
+    width: 330px;
+    height: 370px;
+    font-size: 22px;
+    /* text-align: center; */
+    border-radius: 10px;
+}
+img {
+    height: 220px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 14px;
+    border-radius: 10px;
+
+}
+.caption {
+    text-align: left;
+    margin-left: 20px;
+    font-weight: bold;
+}
+.discount {
+    color: blue;
+
+}
+.original {
+    text-decoration:line-through;
+    color: gray;
+}
+button {
+    background-color:rgb(33, 247, 33);
+    border: 1px solid rgb(33, 247, 33);
+    height: 25px;
+    padding: 3px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+
+
+}
+#hr {
+    background-color:beige;
+    width: 200px;
+    margin-left:2px;
+}
