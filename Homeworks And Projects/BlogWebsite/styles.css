@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#wraper {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content {
+    display: inline-block;
+    height: 100%;
+    width: 80%;
+
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.box {
+    width: 450px;
+    height: 300px;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgb(227, 252, 243);
+    border: 2px solid rgb(194, 188, 188);
+    /* justify-content: space-evenly; */
+}
+
+.header {
+    display: inline-block;
+    text-align: center;
+    text-decoration: underline;
+    padding-left: 520px;
+    /* justify-content: space-evenly; */
+
+}
+
+.head {
+    display: inline-block;
+    color: blue;
+    padding-left: 15px;
+    padding-top: 25px;
+    /* justify-content: space-evenly; */
+}
+
+.example {
+    display: inline-block;
+    padding-left: 300px;
+    border: 0px;
+    /* justify-content: space-evenly; */
+
+
+}
+
+.p {
+    padding-left: 15px;
+    padding-top: 20px;
+    color: blue;
+    font-family: sans-serif;
+
+}
+
+h1 {
+    padding-left: 15px;
+}
+
+.text {
+    padding-left: 15px;
+    color: rgb(133, 131, 130);
+}
+
+.margin {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.a {
+    display: inline-block;
+    padding-left: 15px;
+    padding-top: 110px;
+    color: blue;
+
+}
+
+.new {
+    color: blue;
+}
+
+.lorem {
+    padding-left: 15px;
+    padding-top: 30px;
+}
+
+.border {
+    padding-top: 5px;
+    border: 1px solid rgb(167, 161, 161);
+    border-radius: 2px;
+
+}
+
+.div {
+
+    padding-top: 20px;
+    padding-left: 15px;
+    width: 100%;
+
+}
+
+.lorem1 {
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.lorem2 {
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+.list {
+    padding-left: 70px;
+    padding-top: 20px;
+}
+
+.list1 {
+    padding-top: 6px;
+}
+
+.sidebar {
+
+    position: relative;
+    display: block;
+    height: 90%;
+    width: 15%;
+    border: 2px solid rgb(247, 248, 250);
+    border-radius: 1px;
+    background-color: rgb(255, 255, 251);
+    float: right;
+    margin-top: 5px;
+    margin-right: 2px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.archives {
+    padding-top: 30px;
+    padding-left: 15px;
+}
