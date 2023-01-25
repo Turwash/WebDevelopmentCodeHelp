@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #fff;
+  background-color: #1f2029;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: none;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #fff;
+  margin: 0;
+}
+
+.section-fluid-main {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section {
+  position: relative;
+  /* max-width: calc(100% - 40px); Find Out Why This??*/
+  width: 860px;
+  margin: 0 auto; /*Used for equal spacing from left right*/
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 0;
+}
+
+.section-fluid {  /*Section fluid takes the whole modern chair content inside it*/
+  position: relative;
+  /* Why this */
+  width: 100%;
+  display: block;
+}
+
+/*We Invisible radio button from here : - this is (description and detail radio button)*/
+[type="radio"]:checked, /*This is called Attribute Selector -> [type="radio"] , "checked" means radio button is selected*/
+[type="radio"]:not(:checked){  /*Property set for unchecked */
+  position: absolute;
+  visibility: hidden; /*This will remove Radio button Circle  */
+}
+
+.color-btn:checked + label,  /* + is an adjacent sibling selector, this + means after color-btn just after that apply property to label*/
+.color-btn:not(:checked) + label { /* +label is property for label just after button */
+/* setting properties for label(box) of color we will select in webpage */
+  position: relative;
+  height: 40px;
+  transition: all 200ms linear;
+  border-radius: 4px;
+  width: 40px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  color: #ffeba7;
+  margin-right: 10px;
+  box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
+  z-index: 10;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid transparent;
+}
+
+/* when color button is checked the properties for the label(box) is set below */
+.color-btn:checked + label {
+  border-color: #434343;
+  transform: scale(1.1);  /*because when we will click the color box it will increase its size slightly*/
+}
+
+/* Now adding the image in the label(box) of color */
+label.first-color {
+  margin-left: 500px; /*To shift color box to the right side*/
+  background-image: url("./images/color1.jpg");
+}
+label.color-2 {
+  background-image: url("./images/color2.jpg");
+}
+label.color-3 {
+  background-image: url("./images/color3.jpg");
+}
+label.color-4 {
+  background-image: url("./images/color4.jpg");
+}
+label.color-5 {
+  background-image: url("./images/color5.jpg");
+}
+label.color-6 {
+  background-image: url("./images/color6.jpg");
+}
+
+
+/*The chair section starts from here*/
+
+.img-wrap {
+  position: absolute;  /*Overlapping the images from this property*/
+  top: 100px;
+  left: 0;
+  width: 500px;
+  height: 410px;
+  display: inline-block; /*inline-block is used to set your image height and width */
+  z-index: 9;
+  transition: all 550ms linear;
+  transition-delay: 100ms;
+  background-position: center top;
+  background-size: 100%;
+  background-repeat: no-repeat; /*to stop the repetition images of chair*/
+  background-image: url("./images/chair1.png"); /*The image that will be seen first initially*/
+  opacity: 0; /*Because of this images are not seen*/
+}
+
+/*Now adding animation to the chair also increasing opacity to 1*/
+.for-color-1:checked ~ .img-wrap.chair-1 { /* ~ is used when color-1 is checked then make visible to image of chair 1 , when color-1 is closed then anywhere in the document image-wrap-class the properties will be applied (~ is also a selector , general sibling selector) */
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.img-wrap.chair-2 {
+  background-image: url("./images/chair2.png");
+}
+.for-color-2:checked ~ .img-wrap.chair-2 {
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.img-wrap.chair-3 {
+  background-image: url("./images/chair3.png");
+}
+.for-color-3:checked ~ .img-wrap.chair-3 {
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.img-wrap.chair-4 {
+  background-image: url("./images/chair4.png");
+}
+.for-color-4:checked ~ .img-wrap.chair-4 {
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.img-wrap.chair-5 {
+  background-image: url("./images/chair5.png");
+}
+.for-color-5:checked ~ .img-wrap.chair-5 {
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.img-wrap.chair-6 {
+  background-image: url("./images/chair6.png");
+}
+.for-color-6:checked ~ .img-wrap.chair-6 {
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+/*Key frames for creating the animation of shake*/
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0) rotate(-1deg);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0) rotate(2deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0) rotate(-3deg);
+  }
+  40%,
+  60% {
+    transform: translate3d(3px, 0, 0) rotate(3deg);
+  }
+}
+/* Background color gradients */
+.back-color {
+  position: fixed; /*To stop scrolling*/
+  /*setting to whole Viewport*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block; /*Need or not??*/
+  z-index: 1;
+  background-image: linear-gradient(196deg, #f1a9a9, #e66767); /*By default background color pink is fixed*/
+  transition: all 250ms linear;
+  transition-delay: 300ms;
+}
+
+/* Back color changing with a color box click :- */
+.back-color.chair-2 {
+  background-image: linear-gradient(196deg, #4c4c4c, #262626);
+  opacity: 0; /*Initial starting zero*/
+}
+.for-color-2:checked ~ .back-color.chair-2 {
+  opacity: 1; /*when button clicked opacity 1*/
+}
+.back-color.chair-3 {
+  background-image: linear-gradient(196deg, #8a9fb2, #5f7991);
+  opacity: 0;
+}
+.for-color-3:checked ~ .back-color.chair-3 {
+  opacity: 1;
+}
+.back-color.chair-4 {
+  background-image: linear-gradient(196deg, #97afc3, #6789a7);
+  opacity: 0;
+}
+.for-color-4:checked ~ .back-color.chair-4 {
+  opacity: 1;
+}
+.back-color.chair-5 {
+  background-image: linear-gradient(196deg, #afa6a0, #8c7f76);
+  opacity: 0;
+}
+.for-color-5:checked ~ .back-color.chair-5 {
+  opacity: 1;
+}
+.back-color.chair-6 {
+  background-image: linear-gradient(196deg, #aaadac, #838786);
+  opacity: 0;
+}
+.for-color-6:checked ~ .back-color.chair-6 {
+  opacity: 1;
+}
+
+/*All text information field*/
+.info-wrap {
+  position: relative;
+  margin-left: 500px;
+  z-index: 10;
+  display: block;
+  text-align: left;
+}
+
+/*For the title of Modern chair*/
+
+.title-up {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 1.2;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.2;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+h4 span {
+  text-decoration: line-through; /*Strike the text of $530*/
+  font-size: 20px;
+  opacity: 0.6; 
+  padding-left: 15px;
+}
+h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/*For the description button when we click we get decription*/
+.desc-btn:checked + label,
+.desc-btn:not(:checked) + label { /*If decription button is not checked use the properties to labet after that*/
+  position: relative; 
+  transition: all 200ms linear; /*Transition is for the hover opacity*/
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  color: #ffeba7;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #fff;
+  margin-right: 25px;
+  opacity: 0.5; /*for faded look when not clicked*/
+}
+
+/*when clicked opacity changed to 1*/
+.desc-btn:checked + label {
+  opacity: 1;
+}
+/*when unclicked but hover opacity change to 0.8*/
+.desc-btn:not(:checked) + label:hover {
+  opacity: 0.8;
+}
+
+
+/*Description section , we see a paragraph when we click description section*/
+.desc-sec {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  transition: all 250ms linear; 
+  opacity: 0; /*initially to hide paragraph*/
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(20px); /*when we will switch vertically text will switch between description and detail button*/
+}
+
+/*dimentions are witten inside this class*/
+.desc-sec.accor-2 {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+/*desc1 is first label of description desc2 is second label of detail*/
+#desc-1:checked ~ .desc-sec.accor-1 { /*When checked description button show paragraph*/
+  opacity: 1;
+  pointer-events: auto; /*To decide action events (like click and hover) behaviours using mouse pointer*/
+  transform: translateY(0);
+}
+#desc-2:checked ~ .desc-sec.accor-2 { /*When checked detail button show paragraph*/
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+
+.section-inline {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/*font size of values in detail button*/
+.section-inline p span {
+  font-size: 30px;
+  line-height: 1.1; 
+}
+
+
+/* Add to cart button */
+
+.btn {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
+  height: 48px;
+  border-radius: 4px;
+  width: 210px;
+  letter-spacing: 1px;
+  display: inline-flex; /*
+  The element itself is formatted as an inline element but you can apply height and width values. inline-flex. Displays an element as an inline-level flex container*/
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent; /*Initially tansparent same as background color*/
+  color: #fff;
+  box-shadow: 0 6px 15px 0 rgba(16, 39, 112, 0.15);
+  transition: all 250ms linear;
+  text-decoration: none;
+  margin-top: 50px;
+}
+
+/* Icon of the cart */
+.icon {
+  padding-right: 7px;
+  font-size: 20px;
+}
+
+.btn:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  background-color: #944852; /*By default Backgroud color of button*/
+  transition: background-color 250ms 300ms ease;
+}
+
+/* When hover change background and give shadow */
+.btn:hover {
+  box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
+  background-color: #333; 
+}
+
+/* Changing the button color when color box is clicked */
+.for-color-2:checked ~ .info-wrap .btn:before {
+  background-color: #1a1a1a;
+}
+.for-color-3:checked ~ .info-wrap .btn:before {
+  background-color: #40566e;
+}
+.for-color-4:checked ~ .info-wrap .btn:before {
+  background-color: #5e89b2;
+}
+.for-color-5:checked ~ .info-wrap .btn:before {
+  background-color: #8c7f76;
+}
+.for-color-6:checked ~ .info-wrap .btn:before {
+  background-color: #5d6160;
+}
+
+
+/* RESPONSIVENESSSSS NOWWWWW  */
+
+@media screen and (max-width: 991px) {
+  .section {
+    margin: 0 auto;
+    text-align: center;
+    max-width: calc(100% - 40px);
+    width: 370px;
+  }
+  label.first-color {
+    margin-left: 0;
+  }
+  .info-wrap {
+    margin-left: 0;
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .img-wrap {
+    width: 375px;
+    height: 308px;
+    left: 50%;
+    margin-left: -190px;
+  }
+  .mob-margin {
+    margin-top: 320px;
+  }
+  .desc-btn:checked + label,
+  .desc-btn:not(:checked) + label {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .color-btn:checked + label,
+  .color-btn:not(:checked) + label {
+    height: 40px;
+    width: 40px;
+    margin: 5px auto;
+    text-align: center;
+  }
+  .section-inline {
+    margin: 0 5px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .section {
+    width: 280px;
+  }
+  .info-wrap {
+    width: 280px;
+  }
+  .color-btn:checked + label,
+  .color-btn:not(:checked) + label {
+    height: 30px;
+    width: 30px;
+  }
+  .section-inline p span {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+  .section-inline p {
+    font-size: 14px;
+  }
+}

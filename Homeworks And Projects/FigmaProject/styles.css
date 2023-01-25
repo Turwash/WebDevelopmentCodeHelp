@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+.container{
+    width: 50%;
+    height: 100%;
+    background-color: whitesmoke;
+    padding: 1rem 2rem 1rem 3rem;
+    font-family: sans-serif;
+}
+.menu, footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 15%;
+    font-size: 0.6rem;
+} 
+nav.menu img{
+    height:35%;
+    width: 7%;
+}
+nav.menu ul{
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+    color: gray;
+    text-shadow: 1px 0 0px rgba(0,0,0,0.1);
+}
+nav.menu li:hover{
+    color: rgb(2, 2, 220);
+    transform: scale(1.02);
+}
+nav.menu button{
+    height: 35%;
+    width: 19%;
+    padding: 0.5rem;
+    background-color: rgb(4, 4, 222);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 1px 0 0 rgba(0,0,0,0.1);
+}
+nav.menu button:hover{
+    background-color: darkblue;
+    transform: scale(1.03);
+}
+section.content1, section.content2{
+    display: flex;
+    justify-content: flex-end;
+    height: 30%;
+}
+.heading{
+    font-size: 1.2rem;
+}
+.desc{
+    font-size: 0.6rem;
+    width: 90%;
+    color: gray;
+}
+section.content1 img, section.content2 img{
+    height: 70%;
+    width: 40%;
+}
+section.content2 img{
+    margin-right: 3rem;
+}
+section.content2 + hr{ /*adjacent sibling selector*/
+    margin-top: -1rem;
+}
+section hr{
+    margin: 0.2rem 0 1rem 0rem;
+    width: 35%;
+}
+footer{
+    margin-top: 1rem;
+}
+footer h5{
+    color: rgb(3, 3, 193);
+    text-decoration: underline;
+    padding: 0.5rem 0;
+}
+.privacy,.addressEmail,.menu2{
+    height: 100%;
+}
+.images{
+    display: flex;
+    gap: 0.2rem;
+    height: 100%;
+    width: 15%;
+
+    /* Notice: Here '.images' is a div container inside footer, and we have set footer as 'justify-content:space-between' i.e. spaces 
+    between all flex items (i.e. '.images', '.menu2', '.addressEmail', '.privacy') will be equal. But it might so happen that the space 
+    between flex items is too large, and you want to shorten it. In that case, apply a bigger width to any flex item 
+    (like how we have given 'width: 15%' here to '.images'), and all other flex items will align in such a way that they
+    are still equally spaced, but now that spacing is lesser. */
+}
+#logo2{
+    height: 52%;
+    width: 42%;
+    padding: 0.5rem 0;
+} 
+.img{
+    height: 50%;
+    width: 50%;
+}
+footer button{
+    height: 20%;
+    border-radius: 50%; /* To create round button, use 'border-radius: 50%' */
+    background-color: blue;
+    border: none;
+    width: 15%;
+}
+.menu2 ul{
+    list-style-type: none;
+}

@@ -1,0 +1,36 @@
+.container{
+
+    height: 500px;
+    width: 500px;
+    border: 3px solid red;
+    background-color: green;
+    display: flex;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    border: 2px solid orange;
+    background-color: aqua;
+
+    /* transition: 2s;  /*adding transition smoothness */
+    /* transition-property: background-color;  /* transition on which property  */
+    /* transition-property: all;  /* All Transition , it is bad practice because impacts performance */
+    /* transition-delay: 5s;  /* animation will work after 5sec  */
+    /* transition: background-color 1s ease 1s; */
+    /* transition: all 1s ease 1s; */
+
+    transition: all 3s cubic-bezier(1 , -0.09 , 0 , 1.68) ; /* using cubic bezier from inspect */
+
+
+}
+
+.box:hover{
+
+
+    background-color: brown;
+    /* transform: rotate(45deg);  */
+    
+    transform: scale(2) translateX(500px) rotate(80deg);
+}

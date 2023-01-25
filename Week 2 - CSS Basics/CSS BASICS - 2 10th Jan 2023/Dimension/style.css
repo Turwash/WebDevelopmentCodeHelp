@@ -1,0 +1,33 @@
+div{
+    max-height: 100px;
+    border: 1px solid black;
+    overflow: scroll;
+}
+
+.minheight {
+    min-height: 100px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#divoverflow {
+    height: 50px;
+    border : 1px solid black;
+    overflow: visible;
+}
+
+.fixed{
+    background-color: aqua;
+    position: fixed;
+}
+
+.divc{
+    border : 1px solid black;
+    color: white;
+    background-color: brown;
+    position: sticky;
+    top:170px;
+    left:60px;
+    
+
+}
