@@ -1,0 +1,16 @@
+RESOURCES FOR TODAY
+
+1)RayzorPay Website We Will Clone Using Tailwind CSS
+https://razorpay.com/
+
+2)Must READ Use Tailwind CSS Documentations 
+https://tailwindcss.com/
+
+3)Tailwind Installation
+https://tailwindcss.com/docs/installation
+
+4) Installing Node From
+https://nodejs.org/en/download/
+
+5) Installing Tailwind Step By Step (with Images)
+https://tailwindcss.com/docs/installation/using-postcss
