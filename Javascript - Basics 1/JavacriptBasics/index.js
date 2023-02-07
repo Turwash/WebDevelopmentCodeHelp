@@ -34,7 +34,18 @@ let num2 = 4 ** 4; // 4 to the power 4
 console.log(num1)
 // similaryly for ( - , / , % , * )
 
-// (4) Pre Post Increment
+
+// COMPARISON OPERATOR : -
+console.log(2 > 4); // False
+console.log(4 > 1); // True
+console.log(3 >= 3); // True
+console.log(5 < 10); // True
+let number = 1;
+let str = '1';
+console.log(number == str); // True (Loose equality)
+console.log(number === str); // False (strict equality)
+
+//Pre Post Increment operator
 
 let x = 6;
 console.log(++x); //this will print 7
@@ -42,3 +53,15 @@ console.log(++x); //this will print 7
 let y = 6;
 console.log(y++); // this will print 6 but then update value of y to 7 
 console.log(y); // here its 7
+
+// Ternary Operator 
+let age = 17;
+let status = (age >= 18 ) ? 'can vote' : 'cant vote';
+console.log(status); // no vote
+
+// Logical operator with non boolean 
+
+// run in console in browser : - 
+// (true || false ) // true
+// (true || true) // true
+// (false || 1 || 5) // 1
