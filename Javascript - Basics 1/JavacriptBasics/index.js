@@ -65,3 +65,60 @@ console.log(status); // no vote
 // (true || false ) // true
 // (true || true) // true
 // (false || 1 || 5) // 1
+
+
+// (5) IF ELSE CONTROL STATEMENT : 
+console.log('If Else');
+let marks = 98 ; 
+if(marks >= 90){
+    console.log('A GRADE');
+}
+else if (marks >= 80){
+    console.log('B GRADE');
+}
+else if (marks >= 70){
+    console.log('C GRADE');
+}
+else if(marks >= 60){
+    console.log('D GRADE');
+}
+else {
+    console.log('E GRADE');
+}
+
+
+// (6) SWITCH CASE CONTROL STATEMENT 
+console.log('Switch case');
+let numberr = 2 ; 
+ switch (numberr){
+    case 1 : console.log('A');
+    break;
+    case 2 :  console.log('B');
+    break;
+    case 3 : console.log('C');
+    break;
+    default : console.log('D');
+ }
+
+ // (7) LOOOOOOPSSSSS : - 
+
+ // for loop:-
+ console.log('For Loop');
+ for (let i = 0;  i < 5 ; i++){
+    console.log(i);
+ }
+
+ // While loop :- 
+ console.log('While Loop');
+let j = 1
+ while (j < 4){
+    console.log(j);
+    j++;
+ }
+ // Do- while loop:- 
+ console.log('Do - While Loop');
+let k = 0;
+do {
+    console.log('Yes');
+    k++;
+} while(k < 10)
