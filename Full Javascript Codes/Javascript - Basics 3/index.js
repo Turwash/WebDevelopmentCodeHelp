@@ -127,3 +127,78 @@ console.log(sliced)
 let fullsliced = combine.slice() 
 console.log(fullsliced)
 
+
+// Spread operator
+
+let third = [1,2,3]
+let fourth = [4,5,6]
+let spreadcombine = [...first,'a',...second,'b']
+console.log(spreadcombine)
+// to copy
+let another = [...spreadcombine]
+
+
+// Iterating array 
+let arry = [1,2,3,4]
+for ( let value of arry){
+    console.log(value)
+}
+
+arry.forEach(function(number){
+    console.log(number);
+});
+
+
+// Joining array 
+
+let a = [1,2,3,4,5]
+const b = a.join()
+console.log(b)
+
+// 
+
+let msgg = "This is my message";
+let parts = msgg.split(" ")
+console.log(parts)
+
+// Sorting in array
+let num5 = [10,50,20,60,30]
+num5.sort() 
+console.log(num5)
+num5.reverse()
+console.log(num5)
+
+//Filtering Arrays 
+
+let num6 = [1,2,-3,-4]
+let filtered = num6.filter(function(value){
+    return value>=0
+})
+console.log(filtered)
+
+
+//Mapping arrays 
+let num7 = [1,2,3,4,5,6]
+let mapped = num7.map(function(value){
+    return 'student_no' +value;
+})
+console.log(mapped)
+
+// mapping in objects
+
+// let num8 = [1,2,-3,-5]
+// let filtered1 = num8.filter(value => value>=0)
+// console.log(filtered1)
+// let item = filtered1.map(function(num){
+//     let obj = {value : num};
+//     return obj;
+// })
+// console.log(item)
+
+// chaining :-
+let num8 = [1,2,-3,-5]
+let item = num8.filter(value => value>=0).map(function(num){
+    let obj = {value : num};
+    return obj;
+})
+console.log(item)
