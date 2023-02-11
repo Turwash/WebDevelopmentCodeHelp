@@ -112,3 +112,18 @@ emp.length=0 // (2) this is good practice and used more
 
 console.log(emp)
 console.log(num2) // address is copied
+
+// Combining and slicing array 
+
+let first = [1,2,3]
+let second = [4,5,6]
+
+let combine = first.concat(second)
+console.log(combine)
+
+let sliced = combine.slice(2,4)
+console.log(sliced)
+
+let fullsliced = combine.slice() 
+console.log(fullsliced)
+
