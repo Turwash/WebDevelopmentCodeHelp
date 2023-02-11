@@ -87,3 +87,28 @@ console.log(c);
 // arrow function
 let d = course.find(course => course.name == 'Love');
 console.log(d);
+
+
+// Removing element : 
+let num = [1,2,3,4,5,6,7,8,9]
+num.pop() //end
+console.log(num);
+num.shift() //beginning
+console.log(num);
+num.splice(3,1) //middle
+console.log(num);
+
+// Emptying an array
+let emp = [1,2,3,4,5]
+let num2 = emp
+// emp = []  // (1) this is not a good practice
+emp.length=0 // (2) this is good practice and used more
+// also 
+// emp.splice(0,number.length)  // (3) this is also good practice
+
+// (4) using loop :
+// while(numbers.length>0)
+// emp.pop();
+
+console.log(emp)
+console.log(num2) // address is copied
