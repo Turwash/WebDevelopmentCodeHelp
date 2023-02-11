@@ -79,5 +79,11 @@ let course = [
 console.log(course)
 console.log(course.indexOf({ no:1 , name: 'Love'})) // will give -1 , because it is not primitive its object (reference is different), we cant use indexOf here in objects
 
-
-
+// find now call back function use
+let c = course.find(function(course){
+    return course.name == 'Love'
+})
+console.log(c);
+// arrow function
+let d = course.find(course => course.name == 'Love');
+console.log(d);
