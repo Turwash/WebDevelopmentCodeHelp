@@ -1,4 +1,4 @@
-// Error Handling
+// Error Handling using try and catch
 
 //let person1 = {
 //     fname : 'Love',
