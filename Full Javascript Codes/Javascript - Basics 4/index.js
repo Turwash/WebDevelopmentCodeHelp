@@ -93,52 +93,52 @@ console.log(interest(10000,5))
 
 // 
 
-let person = {
-    fname : 'Turwash',
-    lname : 'chakraborty'
-};
+// let person = {
+//     fname : 'Turwash',
+//     lname : 'chakraborty'
+// };
 
-function fullname (){ // this is only a read only function 
-    return `${person.fname} ${person.lname}`;
-}
+// function fullname (){ // this is only a read only function 
+//     return `${person.fname} ${person.lname}`;
+// }
 
-console.log(fullname()); 
+// console.log(fullname()); 
 
-// for getter and setter 
-// for getter use get keyword
+// // for getter and setter 
+// // for getter use get keyword
 
-let person1 = {
-    fname : 'Love',
-    lanem: 'Babbar',
+// let person1 = {
+//     fname : 'Love',
+//     lanem: 'Babbar',
 
-    get fullName() {
-        return `${person.fname} ${person.lname}`;
+//     get fullName() {
+//         return `${person.fname} ${person.lname}`;
 
-    },
-    set fullName (value) {
-        if(typeof value !== String){
-        throw new Error ("Not a string");
-    }
-        let parts = value.split(' ');
-        this.fname = parts[0];
-        this.lname = parts[1];
-    }
-};
+//     },
+//     set fullName (value) {
+//         if(typeof value !== String){
+//         throw new Error ("Not a string");
+//     }
+//         let parts = value.split(' ');
+//         this.fname = parts[0];
+//         this.lname = parts[1];
+//     }
+// };
 
 // to call 
-console.log(person1.fullName); //getter
-person1.fullName = 'Rahul Kumar'; // setter
-console.log(person1.fullName); 
+// console.log(person1.fullName); //getter
+// person1.fullName = 'Rahul Kumar'; // setter
+// console.log(person1.fullName); 
 
 
 
 // try catch to throw error
-try {
-    person1.fullName = true;
-}
-catch (e){
-    alert(e)
-}
+// try {
+//     person1.fullName = true;
+// }
+// catch (e){
+//     alert(e)
+// }
  
 
 // Scope
@@ -162,3 +162,17 @@ catch (e){
 // function b(){
 //     const ab = 5;
 // }
+
+// Reducing an array : -
+let arr = [1,2,3,4];
+let total = 0;
+
+for (let value in arr)
+total = total + value;
+console.log(total);
+
+// to reduce
+
+let totalSum = arr.reduce((accumulator , currentValue)=> accumulator + currentValue, 0);
+console.log("Printing the sum")
+console.log(totalSum)
