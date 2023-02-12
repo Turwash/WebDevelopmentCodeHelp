@@ -1,4 +1,6 @@
-let person1 = {
+// Error Handling
+
+//let person1 = {
 //     fname : 'Love',
 //     lanem: 'Babbar',
 
